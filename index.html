@@ -1,0 +1,153 @@
+<!-- Welcome KWK 2020 Scholars! -->
+<!-- We are so excited to see what you create with this Zen Garden. 
+You will use this HTML as your starting point, and write ANY CSS you 
+want to design and build this site! -->
+<!-- Anytime you see a grey comment with a 👋  emoji, read carefully -
+ those indicate places you can change the HTML!!! -->
+<!-- If you need to add a class or ID to an element, that is also ok. -->
+<!-- Here is the link for the available photos: https://bit.ly/kwk-el-assets  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!--   👋 Feel free to change the title of your site!   -->
+    <title>Estée Lauder Challenge</title>
+    <link rel="stylesheet" href="/style.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:ital,wght@1,300;1,400&display=swap" rel="stylesheet"> <link>
+<link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre&family=Lexend+Zetta&family=Limelight&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <script src="/script.js" defer></script>
+  </head>
+
+  <body>
+    <section class="above-the-fold">
+      <nav class="nav-bar">
+        <h1 class="title">ESTÉE LAUDER</h1>
+        <ul class="nav-bar-options">
+          <li class="option">Skincare</li>
+          <li class="option">Makeup</li>
+          <li class="option">Fragrance</li>
+          <li class="option">Re-Nutriv</li>
+          <li class="option">Aerin</li>
+          <li class="option">Best Sellers</li>
+          <li class="option">New</li>
+          <li class="option">Gifts</li>
+          <li class="option">Trending</li>
+          <li class="option">Estée Stories</li>
+        </ul>
+      </nav>
+
+      <section class="hero-content">
+        <h2 class="hero-title">LICENSE TO THRILL</h2>
+        <p class="hero-text">
+          Transform your lips, your look, your attitude with pure color envy
+          lipstick.
+        </p>
+         <div class="btn">
+          <button class="shop-now-btn">SHOP NOW</button>
+        </div>
+      </section>
+    </section>
+
+    <section class="below-the-fold">
+      <h2 class="media-title">LIPS TO ENVY</h2>
+      <section class="media">
+   <div id="slide">
+  <div class="slideshow-container">
+    <div class="mySlides fade"> <img src="discreet.jpg" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="eccentric.jpg" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="persuasive.jpg" style="width:100%"> </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
+  <br>
+  <div style="text-align:center"> 
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+   </div>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+var slides,dots;
+
+function showSlides() {
+    var i;
+    slides = document.getElementsByClassName("mySlides");
+    dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 8000); // Change image every 8 seconds
+}
+
+function plusSlides(position) {
+    slideIndex +=position;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+
+function currentSlide(index) {
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[index-1].style.display = "block";  
+    dots[index-1].className += " active";
+}
+  </script>
+
+   
+         <div class = "videos">
+        <iframe
+          class="media-2"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/TX50UTe__i4"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+
+        <!--  👋  This is the second video option!  -->
+       
+          <iframe
+          class="media-2"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/jHvplDfZbU0"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        </div>
+
+      </section>
+    </section>
+    
+  </body>
+  
+</html>
